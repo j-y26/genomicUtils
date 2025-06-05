@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "genomicUtils"
+version = "0.1.0"
+description = "A bioinformatics CLI toolkit for bulk and single cell genomic data processing."
+authors = [{ name = "Jielin Yang", email = "jielin.yang@sickkids.ca" }]
+readme = "README.md"
+requires-python = ">=3.7"
+
+dependencies = [
+    "typer",
+    "tqdm",
+    "pandas",
+    "numpy",
+    "h5py",
+    "scipy",
+    "pysam",
+    "biopython"
+]
+
+[project.scripts]
+genomicUtils = "genomicUtils.cli:app"
+bedSelect = "genomicUtils.bedSelect:app"
+calcReadTypeProp = "genomicUtils.calcReadTypeProp:app"
+convertContigNames = "genomicUtils.convertContigNames:app"
+extractExonFromGTF = "genomicUtils.extractExonFromGTF:app"
+extractGEXFromH5 = "genomicUtils.extractGEXFromH5:app"
+extractGeneFromGTF = "genomicUtils.extractGeneFromGTF:app"
+extractTranscriptFromGTF = "genomicUtils.extractTranscriptFromGTF:app"
+fileNameConversion = "genomicUtils.fileNameConversion:app"
+fragment2Bigwig = "genomicUtils.fragment2Bigwig:app"
+generatePromoterBed = "genomicUtils.generatePromoterBed:app"
+generateSampleMatrix = "genomicUtils.generateSampleMatrix:app"
+gexBamTagsToCSV = "genomicUtils.gexBamTagsToCSV:app"
+multiFastaSelect = "genomicUtils.multiFastaSelect:app"
