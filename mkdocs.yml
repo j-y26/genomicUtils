@@ -1,0 +1,96 @@
+
+site_name: genomicUtils
+site_url: https://genomicutils.readthedocs.io
+repo_url: https://github.com/j-y26/genomicUtils
+repo_name: genomicUtils
+theme:
+  name: material
+  logo: asset/logo.png
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.footer
+    - toc.integrate
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs
+    - search.suggest
+    - search.highlight
+  palette: 
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+  
+  icon:
+    logo: asset/genomicUtils_logo.png
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - mkdocs-typer2:
+      pretty: true
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_root_heading: true
+            show_source: true
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - General Tools:
+      - bedSelect: general/bedSelect.md
+      - fileNameConversion: general/fileNameConversion.md
+      - convertContigNames: general/convertContigNames.md
+      - extractGeneFromGTF: general/extractGeneFromGTF.md
+      - extractTranscriptFromGTF: general/extractTranscriptFromGTF.md
+      - extractExonFromGTF: general/extractExonFromGTF.md
+      - generatePromoterBed: general/generatePromoterBed.md
+      - generateSampleMatrix: general/generateSampleMatrix.md
+      - multiFastaSelect: general/multiFastaSelect.md
+  - Single-cell Tools:
+      - gexBamTagsToCSV: single_cell/gexBamTagsToCSV.md
+      - calcReadTypeProp: single_cell/calcReadTypeProp.md
+      - extractGEXFromH5: single_cell/extractGEXFromH5.md
+      - fragment2Bigwig: single_cell/fragment2Bigwig.md
+      
+extra:
+  social:
+    - icon: fontawesome/solid/envelope
+      link: mailto:<jielin.yang@sickkids.ca>
+      name: Contact us
+    - icon: fontawesome/brands/github
+      link: https://github.com/j-y26
+      name: GitHub Profile
+
+copyright: Copyright &copy; 2025 Jielin Yang
+
+repo_url: https://github.com/j-y26/genomicUtils
+repo_name: genomicUtils

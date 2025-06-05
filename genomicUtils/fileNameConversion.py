@@ -65,6 +65,7 @@ def convert_file_names(
                 print("Sample " + sample_name + " not found in the sample sheet")
         else:
             print("File " + file + " does not have the correct extension")
+convert_file_names.__doc__ = description
 
 if __name__ == "__main__":
     app()

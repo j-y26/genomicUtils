@@ -83,6 +83,7 @@ def generate_promoter_bed(
     # Write the bed file
     bed.to_csv(output_file, sep="\t", header=False, index=False)
     typer.echo(f"Promoter regions written to: {output_file}")
+generate_promoter_bed.__doc__ = description
 
 if __name__ == "__main__":
     app()

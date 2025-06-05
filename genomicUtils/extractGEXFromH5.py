@@ -18,7 +18,12 @@ def extract_gex_from_multiome_h5(
     input_file: Path = typer.Option(..., "-i", "--input", help="Path to input multiome h5 file"),
     output_file: Path = typer.Option(..., "-o", "--output", help="Path to output gene expression only h5 file")
 ):
-    
+    """
+    Extract gene expression features from a multiome H5 file.
+    This command reads a multiome H5 file, filters out only the gene expression features,
+    and writes a new HDF5 file with the same structure as the original, but containing only
+    the gene expression data. The output file will maintain the Cell Ranger v3 format structure.
+    """
     with h5py.File(input_file, "r") as f_in:
         # Read matrix components
         barcodes = f_in["matrix/barcodes"][:]

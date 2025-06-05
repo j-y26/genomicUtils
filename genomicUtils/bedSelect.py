@@ -35,7 +35,14 @@ def main(
     exclude: Optional[str] = typer.Option(None, "-e", "--exclude", help="Regex pattern to exclude"),
     exclude_file: Optional[Path] = typer.Option(None, "-ef", "--exclude-file", help="File with exclusion patterns")
 ):
-    """Selects BED rows matching include/exclude patterns in specified columns."""
+    """
+    Selects BED rows matching include/exclude patterns in specified columns.
+
+    This command filters a BED file based on regular expression patterns applied to user-specified columns.
+    It supports both inclusion and exclusion patterns, provided either as command-line arguments or files.
+    The output is a filtered BED file containing only the rows that match the inclusion patterns and do
+    not match the exclusion patterns.
+    """
 
     if not pattern and not pattern_file:
         typer.echo("Error: At least one of --pattern or --pattern-file must be provided.", err=True)

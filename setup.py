@@ -18,18 +18,18 @@ setup(
         "console_scripts": [
             "genomicUtils=genomicUtils.cli:app",
             "bedSelect=genomicUtils.bedSelect:app",
-            "calcReadTypeProp=genomicUtils.calcReadTypeProp:app", 
+            "fileNameConversion=genomicUtils.fileNameConversion:app",
             "convertContigNames=genomicUtils.convertContigNames:app",
-            "extractExonFromGTF=genomicUtils.extractExonFromGTF:app",
-            "extractGEXFromH5=genomicUtils.extractGEXFromH5:app",
             "extractGeneFromGTF=genomicUtils.extractGeneFromGTF:app",
             "extractTranscriptFromGTF=genomicUtils.extractTranscriptFromGTF:app",
-            "fileNameConversion=genomicUtils.fileNameConversion:app",
-            "fragment2Bigwig=genomicUtils.fragment2Bigwig:app",
+            "extractExonFromGTF=genomicUtils.extractExonFromGTF:app",
             "generatePromoterBed=genomicUtils.generatePromoterBed:app",
             "generateSampleMatrix=genomicUtils.generateSampleMatrix:app",
+            "multiFastaSelect=genomicUtils.multiFastaSelect:app",
             "gexBamTagsToCSV=genomicUtils.gexBamTagsToCSV:app",
-            "multiFastaSelect=genomicUtils.multiFastaSelect:app"
+            "calcReadTypeProp=genomicUtils.calcReadTypeProp:app",
+            "extractGEXFromH5=genomicUtils.extractGEXFromH5:app",
+            "fragment2Bigwig=genomicUtils.fragment2Bigwig:app"
         ]
     },
     author="Jielin Yang",

@@ -61,6 +61,7 @@ def generate_sample_matrix(
 
     typer.echo("Sample matrix generated successfully!")
     typer.echo(f"Sample matrix saved to {output_file}")
+generate_sample_matrix.__doc__ = description
 
 if __name__ == "__main__":
     app()

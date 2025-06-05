@@ -150,6 +150,7 @@ def main(
 
     typer.echo(f"Analysis finished at {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))}")
     typer.echo(f"Total time: {time.time() - start_time:.2f}s")
+main.__doc__ = description
 
 if __name__ == "__main__":
     app()

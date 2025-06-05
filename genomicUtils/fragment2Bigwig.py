@@ -153,6 +153,7 @@ def main(
     else:
         typer.echo(f"Temporary files cleaned up: {tmpdir}")
         shutil.rmtree(tmpdir, ignore_errors=True)
+main.__doc__ = description
 
 if __name__ == "__main__":
     app()

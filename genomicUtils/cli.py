@@ -36,19 +36,20 @@ def main(
         raise typer.Exit()
 
 # Register subcommands
-app.add_typer(extractGEXFromH5.app, name="extractGEXFromH5")
-app.add_typer(fileNameConversion.app, name="fileNameConversion")
-app.add_typer(generateSampleMatrix.app, name="generateSampleMatrix")
 app.add_typer(bedSelect.app, name="bedSelect")
+app.add_typer(fileNameConversion.app, name="fileNameConversion")
 app.add_typer(convertContigNames.app, name="convertContigNames")
 app.add_typer(extractGeneFromGTF.app, name="extractGeneFromGTF")
-app.add_typer(fragment2Bigwig.app, name="fragment2Bigwig")
+app.add_typer(extractTranscriptFromGTF.app, name="extractTranscriptFromGTF")
+app.add_typer(extractExonFromGTF.app, name="extractExonFromGTF")
+app.add_typer(generatePromoterBed.app, name="generatePromoterBed")
+app.add_typer(generateSampleMatrix.app, name="generateSampleMatrix")
+app.add_typer(multiFastaSelect.app, name="multiFastaSelect")
 app.add_typer(gexBamTagsToCSV.app, name="gexBamTagsToCSV")
 app.add_typer(calcReadTypeProp.app, name="calcReadTypeProp")
-app.add_typer(extractExonFromGTF.app, name="extractExonFromGTF")
-app.add_typer(extractTranscriptFromGTF.app, name="extractTranscriptFromGTF")
-app.add_typer(generatePromoterBed.app, name="generatePromoterBed")
-app.add_typer(multiFastaSelect.app, name="multiFastaSelect")
+app.add_typer(extractGEXFromH5.app, name="extractGEXFromH5")
+app.add_typer(fragment2Bigwig.app, name="fragment2Bigwig")
+
 
 if __name__ == "__main__":
     app()
