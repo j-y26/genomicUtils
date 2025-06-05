@@ -57,8 +57,6 @@ plugins:
             show_source: true
 
 markdown_extensions:
-  - admonition
-  - codehilite
   - toc:
       permalink: true
 
