@@ -18,15 +18,7 @@ def extract(
 ):
     """
     Extract gene information from a GTF file and output it in a BED-like format.
-    The output file will contain the following columns:
-    - chromosome
-    - start
-    - end
-    - strand
-    - exon_id
-    - gene_id
-    - gene_name
-    - gene_type
+    The output file will contain the following columns: `chromosome`, `start`, `end`, `strand`, `transcript_id`, `transcript_name`, `transcript_type`, `gene_id`, and `gene_name`.
     """
     with open(gtf_file, 'r') as f, open(output_file, 'r') as o:
         typer.echo(f"Extracted gene information from {gtf_file} to {output_file}.")

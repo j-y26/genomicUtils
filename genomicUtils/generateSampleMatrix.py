@@ -34,7 +34,9 @@ def generate_sample_matrix(
     suffix: str = typer.Option(..., "-s", "--suffix", help="Suffix of the files to include"),
     output_file: Path = typer.Option(..., "-o", "--output", help="Output file to save the sample matrix")
 ):
-    
+    """
+    Generate a sample matrix csv file for files in a directory with a specific suffix.
+    """
     # Traverse the directory to find files with the specified suffix
     sample_matrix = []
     for root, dirs, files in os.walk(directory):
@@ -61,7 +63,6 @@ def generate_sample_matrix(
 
     typer.echo("Sample matrix generated successfully!")
     typer.echo(f"Sample matrix saved to {output_file}")
-generate_sample_matrix.__doc__ = description
 
 if __name__ == "__main__":
     app()

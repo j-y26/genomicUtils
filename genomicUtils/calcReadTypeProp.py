@@ -141,8 +141,6 @@ def main(
     typer.echo("Done.")
     typer.echo(f"Output written to {output_csv}")
 
-main.__doc__ = description
-
 # Check if the script is being run directly
 if __name__ == "__main__":
     app()

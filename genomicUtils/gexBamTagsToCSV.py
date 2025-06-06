@@ -122,7 +122,26 @@ def main(
     num_threads: int = typer.Option(mp.cpu_count(), "-t", "--threads", help="Number of threads to use."),
     temp_dir: Path = typer.Option(tempfile.gettempdir(), "-d", "--temp_dir", help="Temporary directory for intermediate files.")
 ):
-    
+    """
+    This script parses important Cell Ranger alignment tags from the `gex_possorted_bam.bam` file into a CSV file.
+
+    **Output:**
+
+    - Each row corresponds to a read  
+    - Each column corresponds to a tag  
+    - The values are the tag values, without the tag name or type  
+    - UMIs are deduplicated  
+    - Only confidently mapped reads are included (`MAPQ = 255`)  
+    - Only valid barcodes are retained (`CB`, `UB`)
+
+    **Parsed Tags:**
+
+    1. `CB:Z:` Confirmed cell barcode  
+    2. `UB:Z:` Confirmed UMI  
+    3. `MAPQ:` Mapping quality  
+    4. `RE:A:` Region type of alignment (`E`, `N`, `I`)  
+    5. `GN:Z:` Gene name(s)
+    """
     start_time = time.time()
     typer.echo(f"Analysis started at {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(start_time))}")
 
@@ -150,7 +169,6 @@ def main(
 
     typer.echo(f"Analysis finished at {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))}")
     typer.echo(f"Total time: {time.time() - start_time:.2f}s")
-main.__doc__ = description
 
 if __name__ == "__main__":
     app()
