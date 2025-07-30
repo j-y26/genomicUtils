@@ -15,6 +15,7 @@ from genomicUtils import (
     generateSampleMatrix,
     gexBamTagsToCSV,
     multiFastaSelect,
+    gexBamReadTypeProp
 )
 
 app = typer.Typer(
@@ -49,6 +50,7 @@ app.add_typer(gexBamTagsToCSV.app, name="gexBamTagsToCSV")
 app.add_typer(calcReadTypeProp.app, name="calcReadTypeProp")
 app.add_typer(extractGEXFromH5.app, name="extractGEXFromH5")
 app.add_typer(fragment2Bigwig.app, name="fragment2Bigwig")
+app.add_typer(gexBamReadTypeProp.app, name="gexBamReadTypeProp")
 
 
 if __name__ == "__main__":

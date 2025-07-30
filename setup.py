@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="genomicUtils",
-    version="0.1.0",
+    version="0.2.0",
     packages=find_packages(),
     install_requires=[
         "typer",
@@ -29,7 +29,8 @@ setup(
             "gexBamTagsToCSV=genomicUtils.gexBamTagsToCSV:app",
             "calcReadTypeProp=genomicUtils.calcReadTypeProp:app",
             "extractGEXFromH5=genomicUtils.extractGEXFromH5:app",
-            "fragment2Bigwig=genomicUtils.fragment2Bigwig:app"
+            "fragment2Bigwig=genomicUtils.fragment2Bigwig:app",
+            "gexBamReadTypeProp=genomicUtils.gexBamReadTypeProp:app"
         ]
     },
     author="Jielin Yang",

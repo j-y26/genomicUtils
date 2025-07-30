@@ -34,3 +34,4 @@ Each tool is self-contained and scriptable, making `genomicUtils` ideal for high
 - [extractGEXFromH5](single_cell/extractGEXFromH5.md): Extract gene expression features from a multiome H5 file
 - [fragment2Bigwig](single_cell/fragment2Bigwig.md): Convert 10X CellRanger ARC/ATAC fragment file to BigWig format
 - [gexBamTagsToCSV](single_cell/gexBamTagsToCSV.md): Parse Cell Ranger BAM tags into a CSV file with deduplication
+- [gexBamReadTypeProp](single_cell/gexBamReadTypeProp.md): Combined pipeline that processes Cell Ranger BAM files to calculate read type proportions per cell

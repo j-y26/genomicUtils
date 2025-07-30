@@ -71,6 +71,7 @@ nav:
       - calcReadTypeProp: single_cell/calcReadTypeProp.md
       - extractGEXFromH5: single_cell/extractGEXFromH5.md
       - fragment2Bigwig: single_cell/fragment2Bigwig.md
+      - gexBamReadTypeProp: single_cell/gexBamReadTypeProp.md
       
 extra:
   social:

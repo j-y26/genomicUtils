@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "genomicUtils"
-version = "0.1.0"
+version = "0.2.0"
 description = "A bioinformatics CLI toolkit for bulk and single cell genomic data processing."
 authors = [{ name = "Jielin Yang", email = "jielin.yang@sickkids.ca" }]
 readme = "README.md"
@@ -36,6 +36,7 @@ gexBamTagsToCSV = "genomicUtils.gexBamTagsToCSV:app"
 calcReadTypeProp = "genomicUtils.calcReadTypeProp:app"
 extractGEXFromH5 = "genomicUtils.extractGEXFromH5:app"
 fragment2Bigwig = "genomicUtils.fragment2Bigwig:app"
+gexBamReadTypeProp = "genomicUtils.gexBamReadTypeProp:app"
 
 
 [project.optional-dependencies]
